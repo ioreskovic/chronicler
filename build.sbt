@@ -239,3 +239,5 @@ lazy val examples = project
   .settings(name := "chronicler-examples")
   .dependsOn(coreShared, coreIO, coreManagement)
   .dependsOn(akkaHttpShared, akkaHttpIO, akkaHttpManagement)
+  .dependsOn(urlHttpShared, urlHttpIO, urlHttpManagement)
+  .dependsOn(asyncHttpShared, asyncHttpIO, asyncHttpManagement)

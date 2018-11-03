@@ -26,4 +26,6 @@ val managementClient = InfluxMng(...) // constructor parameters may wary depends
 Client creation may require additional parameters, depending on selected backend.
 For more information you can always ask questions on [gitter](https://gitter.im/chronicler-scala/Lobby) and check out some examples.
 
-- [akka-http setup example](akka-http_setup.md)
+- [akka-http setup example](ClientCreation.md#akka-http-backend)
+- [async-http setup example](ClientCreation.md#async-http-backend)
+- [url-http setup example](ClientCreation.md#url-http-backend)
