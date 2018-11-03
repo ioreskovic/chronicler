@@ -2,10 +2,7 @@ package com.github.fsanaulla.chronicler.examples.akka
 
 import akka.actor.ActorSystem
 import com.github.fsanaulla.chronicler.akka.management.InfluxMng
-import com.github.fsanaulla.chronicler.core.model.{
-  InfluxConfig,
-  InfluxCredentials
-}
+import com.github.fsanaulla.chronicler.core.model.{InfluxConfig, InfluxCredentials}
 
 import scala.concurrent.Future
 import scala.util.{Failure, Success}

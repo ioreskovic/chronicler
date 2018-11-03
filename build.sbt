@@ -233,11 +233,9 @@ lazy val unitTesting = project
 //////////////////////////////////////////////////////
 /////////////////// EXAMPLES MODULES /////////////////
 //////////////////////////////////////////////////////
-lazy val akkaHttpExamples = project
-  .in(file("examples/akka-http"))
+lazy val examples = project
+  .in(file("examples"))
   .settings(Settings.common: _*)
-  .settings(
-    name := "chronicler-examples-akka-http"
-  )
+  .settings(name := "chronicler-examples")
   .dependsOn(coreShared, coreIO, coreManagement)
   .dependsOn(akkaHttpShared, akkaHttpIO, akkaHttpManagement)

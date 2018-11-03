@@ -26,7 +26,7 @@ val influxIo = InfluxIO(influxConfig)
 
 When done, don't forget to close the client and terminate the actor system.
 
-Full example can be found in `examples/akka-http` module in `com.github.fsanaulla.chronicler.examples.akka.ClientCreation` class.
+Full example can be found in `examples` module in `com.github.fsanaulla.chronicler.examples.akka.ClientCreation` class.
 
 
 [akka-http]: (https://doc.akka.io/docs/akka-http/current/)
