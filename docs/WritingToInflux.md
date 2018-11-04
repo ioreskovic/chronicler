@@ -43,6 +43,35 @@ def writeNativeBulk(ps: Seq[LineProtocolPoint])(db: Database): Try[WriteResult] 
 }
 ```
 
-[line protocol]: https://docs.influxdata.com/influxdb/v1.6/write_protocols/line_protocol_reference/
+## Generic Point
+If you don't want to construct line protocol string by yourself
+(and you really shouldn't), there is an abstraction over it, and it's called
+`Point`.
 
-## Native Point
+As with native line protocol, point allows you to specify measurement name,
+tags, fields and event time.
+
+```scala
+def generatePoint(time: Instant): Point = Point(
+  "pointMeasurement",
+  List(InfluxTag("tagKey1", "tagValue1"), InfluxTag("tagKey2", "tagValue2")),
+  List(IntField("foo", 42), DoubleField("bar", 13.0)),
+  time.toEpochMilli() * 1000000
+)
+```
+
+Similar to line protocol, writing requires database to be specified explicitly
+```scala
+def writePointSingle(p: Point)(db: Database) = db.writePoint(p)
+```
+
+Currently the following value types are supported by `chronicler`
+* `com.github.fsanaulla.chronicler.core.model.StringField`
+* `com.github.fsanaulla.chronicler.core.model.IntField`
+* `com.github.fsanaulla.chronicler.core.model.LongField`
+* `com.github.fsanaulla.chronicler.core.model.DoubleField`
+* `com.github.fsanaulla.chronicler.core.model.BooleanField`
+* `com.github.fsanaulla.chronicler.core.model.CharField`
+* `com.github.fsanaulla.chronicler.core.model.BigDecimalField`
+
+[line protocol]: https://docs.influxdata.com/influxdb/v1.6/write_protocols/line_protocol_reference/
