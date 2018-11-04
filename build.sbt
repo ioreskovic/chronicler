@@ -241,3 +241,4 @@ lazy val examples = project
   .dependsOn(akkaHttpShared, akkaHttpIO, akkaHttpManagement)
   .dependsOn(urlHttpShared, urlHttpIO, urlHttpManagement)
   .dependsOn(asyncHttpShared, asyncHttpIO, asyncHttpManagement)
+  .dependsOn(macros)
