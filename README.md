@@ -156,7 +156,7 @@ influx.close()
 For more details see next section. The same example can be applied for other client. With small difference.
 
 # Documentation
-1. [Clients tutorial](docs/clients.md)
+1. [Clients tutorial](docs/Clients.md)
 2. [Read operation](docs/read_operation_notes.md)
 3. [Write operation](docs/write_operation_notes.md)
 4. [Database management](docs/database_management.md)
