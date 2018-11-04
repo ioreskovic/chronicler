@@ -1,11 +1,11 @@
-package com.github.fsanaulla.chronicler.examples.sttp.core
+package com.github.fsanaulla.chronicler.examples.clients
 
-import com.github.fsanaulla.chronicler.urlhttp.management.InfluxMng
 import com.github.fsanaulla.chronicler.core.model.{InfluxConfig, InfluxCredentials}
+import com.github.fsanaulla.chronicler.urlhttp.management.InfluxMng
 
 import scala.util.{Failure, Success}
 
-object ClientCreation extends App {
+object SttpClientCreation extends App {
   val influxConfig = InfluxConfig(
     "localhost",
     8086,

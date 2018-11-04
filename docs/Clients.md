@@ -59,7 +59,7 @@ val influxIo = InfluxIO(influxConfig)
 When done, don't forget to close the client and terminate the actor system.
 
 Full example can be found in `examples` module in `
-com.github.fsanaulla.chronicler.examples.akka.ClientCreation` class.
+com.github.fsanaulla.chronicler.examples.clients.AkkaHttpClientCreation` class.
 
 #### url-http backend
 
@@ -88,7 +88,7 @@ val influxIo = InfluxIO(influxConfig)
 ```
 
 Full example can be found in `examples` module in `
-com.github.fsanaulla.chronicler.examples.sttp.core.ClientCreation` class.
+com.github.fsanaulla.chronicler.examples.clients.SttpClientCreation` class.
 
 #### async-http backend
 
@@ -115,6 +115,6 @@ val influxIo = InfluxIO(influxConfig)
 ```
 
 Full example can be found in `examples` module in `
-com.github.fsanaulla.chronicler.examples.sttp.async.ClientCreation` class.
+com.github.fsanaulla.chronicler.examples.clients.AsyncHttpClientCreation` class.
 
 For more information you can always ask questions on [gitter](https://gitter.im/chronicler-scala/Lobby) and check out some examples.

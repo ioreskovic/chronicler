@@ -1,4 +1,4 @@
-package com.github.fsanaulla.chronicler.examples.akka
+package com.github.fsanaulla.chronicler.examples.clients
 
 import akka.actor.ActorSystem
 import com.github.fsanaulla.chronicler.akka.management.InfluxMng
@@ -7,7 +7,7 @@ import com.github.fsanaulla.chronicler.core.model.{InfluxConfig, InfluxCredentia
 import scala.concurrent.Future
 import scala.util.{Failure, Success}
 
-object ClientCreation extends App {
+object AkkaHttpClientCreation extends App {
   implicit val actorSystem
     : ActorSystem = ActorSystem("chronicler-examples") // creates actor system
   import actorSystem.dispatcher // imports default actor system execution context

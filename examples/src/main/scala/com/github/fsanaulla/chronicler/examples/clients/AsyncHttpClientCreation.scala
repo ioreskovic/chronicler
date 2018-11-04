@@ -1,4 +1,4 @@
-package com.github.fsanaulla.chronicler.examples.sttp.async
+package com.github.fsanaulla.chronicler.examples.clients
 
 import com.github.fsanaulla.chronicler.async.management.InfluxMng
 import com.github.fsanaulla.chronicler.core.model.{InfluxConfig, InfluxCredentials}
@@ -6,7 +6,7 @@ import com.github.fsanaulla.chronicler.core.model.{InfluxConfig, InfluxCredentia
 import scala.concurrent.Future
 import scala.util.{Failure, Success}
 
-object ClientCreation extends App {
+object AsyncHttpClientCreation extends App {
   import scala.concurrent.ExecutionContext.Implicits.global
 
   val influxConfig = InfluxConfig(
